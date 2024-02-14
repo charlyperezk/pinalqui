@@ -4,7 +4,7 @@
 
 ## ---- DB Design ----:
 
-### Properties:
+# Properties:
 - Id_Property # Integer
 - Title # String
 - Address # String
@@ -39,7 +39,7 @@
 - Name # String
 
 # Commodities:
-- Id_Commoditie Interger Incremental
+- Id_Commodity Interger Incremental
 - Capacity (Number of people that can be in the property) Integer
 - Surface (m²) # Float
 - Floors (Quantity) # Integer
