@@ -1,10 +1,10 @@
-### PINALQUI - Web APP Proyect
-### Develop by: Lautaro Lovato y Carlos Pérez Küper.
-### Date: 2024/02/14
+# PINALQUI - Web APP Proyect
+# Develop by: Lautaro Lovato y Carlos Pérez Küper.
+# Date: 2024/02/14
 
-# ---- DB Design ----:
+## ---- DB Design ----:
 
-# Properties:
+### Properties:
 - Id_Property # Integer
 - Title # String
 - Address # String
@@ -16,13 +16,26 @@
 - Id_Currency FK  (Foreign Key referencing Currencies table) # Integer
 - Deposit ($) # Float
 - Description (Text) # String
-### Coordinates are needed if we want to show the property in a map:
+
+#### Coordinates are needed if we want to show the property in a map:
 - Latitude # String
 - Longitude # String
 
 # Cities
 - Id_City # Integer
-- Id_Province
+- Id_Province # Integer
+- Name # String
+
+# Provincies
+- Id_Province # Integer
+- Name # String
+
+# Types (Property types)
+- Id_Type # Integer
+- Name # String
+
+# Currencies (USD/ARS, etc.)
+- Id_Currency # Integer
 - Name # String
 
 # Commodities:
@@ -38,9 +51,9 @@
 - Air Conditioning (Yes or No) # Bool
 
 # Images
-- Id_Image
-- Title
-- URL
-- Id_Property FK #
+- Id_Image # Integer
+- Title # String
+- URL # String
+- Id_Property FK # Integer
 
 # ¿Services  (Another table with available services, like water, gas...)?
