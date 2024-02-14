@@ -1,17 +1,16 @@
 # PINALQUI - Web APP Proyect
-# Develop by: Lautaro Lovato y Carlos Pérez Küper.
-# Date: 2024/02/14
+#### Develop by: Lautaro Lovato y Carlos Pérez Küper.
+#### Date: 2024/02/14
 
-## ---- DB Design ----:
+# ---- DB Design ----:
 
-# Properties:
-- Id_Property # Integer
+## Properties:
+- Id_Property PK # Integer Incremental
 - Title # String
 - Address # String
 - Id_City FK # Integer
 - Id_Type FK # Integer
 - Id_Commodities FK # Integer
-- Id_Images FK # Integer
 - Price ($) # Float
 - Id_Currency FK  (Foreign Key referencing Currencies table) # Integer
 - Deposit ($) # Float
@@ -21,25 +20,25 @@
 - Latitude # String
 - Longitude # String
 
-# Cities
-- Id_City # Integer
+## Cities
+- Id_City PK # Integer Incremental
 - Id_Province # Integer
 - Name # String
 
-# Provincies
-- Id_Province # Integer
+## Provincies
+- Id_Province PK # Integer Incremental
 - Name # String
 
-# Types (Property types)
-- Id_Type # Integer
+## Types (Property types)
+- Id_Type PK # Integer Incremental
 - Name # String
 
-# Currencies (USD/ARS, etc.)
-- Id_Currency # Integer
+## Currencies (USD/ARS, etc.)
+- Id_Currency PK # Integer Incremental
 - Name # String
 
-# Commodities:
-- Id_Commodity Interger Incremental
+## Commodities:
+- Id_Commodity PK # Integer Incremental
 - Capacity (Number of people that can be in the property) Integer
 - Surface (m²) # Float
 - Floors (Quantity) # Integer
@@ -50,10 +49,10 @@
 - Elevator (Yes or No) # Bool
 - Air Conditioning (Yes or No) # Bool
 
-# Images
-- Id_Image # Integer
+## Images
+- Id_Image PK # Integer Incremental
 - Title # String
 - URL # String
 - Id_Property FK # Integer
 
-# ¿Services  (Another table with available services, like water, gas...)?
+## ¿Services  (Another table with available services, like water, gas...)?
