@@ -30,16 +30,3 @@ class PropertyDBM(Base):
     images = relationship('ImageDBM', back_populates='properties')
     # user = relationship('UserDbModel')
     # commodities = relationship('CommodityDBM')
-
-
-# - Id_Property # Integer
-# - Title # String
-# - Address # String
-# - Id_City FK # Integer
-# - Id_Type FK # Integer
-# - Id_Commodities FK # Integer
-# - Id_Images FK # Integer
-# - Price ($) # Float
-# - Id_Currency FK  (Foreign Key referencing Currencies table) # Integer
-# - Deposit ($) # Float
-# - Description (Text) # String
