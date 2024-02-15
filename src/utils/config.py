@@ -10,13 +10,14 @@ class Config:
     # This class is used to manage the configuration of the application. It will be imported by other modules and classes.
     
     default_value_declaration = {
-            'properties': "PROPERTY_STATUS_ACTIVE"
+            'properties': "PROPERTY_STATUS_ACTIVE",
+            'database_url': "DATABASE_URL"
         }
 
     def __init__(self, check_start: bool=False):
         if check_start:
             self.app_starting_check()
-            print("Checked")
+            logging.info("Configurations checked")
         
     @classmethod
     def app_starting_check(cls):
@@ -47,7 +48,8 @@ class Config:
             raise ValueError('Invalid value for key {}: {}'.format(key, e))
         if not config: 
             raise ValueError('Environment variable {} is empty'.format(key))
-        return config
+        else:
+            return config
     
     
     @classmethod

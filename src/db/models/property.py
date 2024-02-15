@@ -8,7 +8,6 @@ from db.db import Base
 from utils.config import Config
 
 # Code
-
 DEFAULT_PROPERTY_STATUS = Config.get_default_config('properties')
 
 class PropertyDBM(Base):
