@@ -22,7 +22,7 @@
 
 ## Cities
 - Id_City PK # Integer Incremental
-- Id_Province # Integer
+- Id_Province FK # Integer
 - Name # String
 
 ## Provincies
@@ -39,6 +39,7 @@
 
 ## Commodities:
 - Id_Commodity PK # Integer Incremental
+- Id_Property FK # Integer
 - Capacity (Number of people that can be in the property) Integer
 - Surface (m²) # Float
 - Floors (Quantity) # Integer

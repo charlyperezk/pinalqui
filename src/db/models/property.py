@@ -20,6 +20,8 @@ class PropertyDBM(Base):
     deposit = Column(Float)
     description = Column(String)
     status = Column(String, default=DEFAULT_PROPERTY_STATUS)
+    longitude = Column(String)
+    latitude = Column(String)
     
     type_id = Column(Integer, ForeignKey('property_types.id'))
     city_id = Column(Integer, ForeignKey('cities.id'))
@@ -28,5 +30,5 @@ class PropertyDBM(Base):
     user_id = Column(Integer, ForeignKey('property_images.id'), default=None)
     
     images = relationship('ImageDBM', back_populates='properties')
+    commodities = relationship('CommodityDBM', back_populates='properties')
     # user = relationship('UserDbModel')
-    # commodities = relationship('CommodityDBM')
