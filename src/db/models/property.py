@@ -4,8 +4,8 @@ from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
 # Internal
-from db.db import Base
-from utils.config import Config
+from src.db.db import Base
+from src.utils.config import Config
 
 # Code
 DEFAULT_PROPERTY_STATUS = Config.get_default_config('properties')

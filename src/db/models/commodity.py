@@ -3,10 +3,10 @@ from sqlalchemy import Column, Integer, String, ForeignKey, Float, Integer, Bool
 from sqlalchemy.orm import relationship
 
 # Internal
-from db.db import Base
+from src.db.db import Base
 
 # Code
-class Commodity(Base):
+class CommodityDBM(Base):
     __tablename__ = 'commodities'
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)

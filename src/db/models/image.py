@@ -3,7 +3,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 
 # Internal
-from db.db import Base
+from src.db.db import Base
 
 # Code
 class ImageDBM(Base):
@@ -12,6 +12,6 @@ class ImageDBM(Base):
     title = Column(String)
     url = Column(String)
 
-    property_id = Column(Integer, ForeignKey('property.id'))
+    property_id = Column(Integer, ForeignKey('properties.id'))
 
     property = relationship('PropertyDBM', back_populates='images')

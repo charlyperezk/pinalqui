@@ -2,7 +2,7 @@
 from sqlalchemy import Column, Integer, String
 
 # Internal
-from db.db import Base
+from src.db.db import Base
 
 # Code
 class PropertyTypeDBM(Base):

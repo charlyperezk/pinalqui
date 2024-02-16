@@ -12,7 +12,7 @@ from src.utils.exceptions import DBEngineInitializationError
 try:
     # engine = create_engine(os.getenv("DATABASE_URL"))
     DB_URL = Config.get_default_config('database_url')
-    engine = create_engine(DB_URL)
+    engine = create_engine(DB_URL) # With argument echo=True, we could see the logs of db.
 except:
     raise DBEngineInitializationError("Failed creating engine")
 
