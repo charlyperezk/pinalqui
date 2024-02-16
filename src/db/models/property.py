@@ -25,9 +25,9 @@ class PropertyDBM(Base):
     
     type_id = Column(Integer, ForeignKey('property_types.id'))
     city_id = Column(Integer, ForeignKey('cities.id'))
-    commodities_id = Column(Integer, ForeignKey('property_commodities.id'))
+    commodities_id = Column(Integer, ForeignKey('commodities.id'))
     currency_id = Column(Integer, ForeignKey('currencies.id'))
-    user_id = Column(Integer, ForeignKey('property_images.id'), default=None)
+    user_id = Column(Integer, ForeignKey('images.id'), default=None)
     
     images = relationship('ImageDBM', back_populates='properties')
     commodities = relationship('CommodityDBM', back_populates='properties')

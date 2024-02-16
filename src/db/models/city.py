@@ -7,10 +7,10 @@ from db.db import Base
 
 # Code
 class CityDBM(Base):
-    __tablename__ = 'provinces'
+    __tablename__ = 'cities'
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
 
-    province_id = Column(Integer, ForeignKey('provincies.id'))
+    province_id = Column(Integer, ForeignKey('provinces.id'))
 
     province = relationship('ProvinceDBM', back_populates='cities')

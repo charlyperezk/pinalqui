@@ -2,31 +2,27 @@
 from pydantic import BaseModel
 from typing import Type, List
 from datetime import datetime
+
 # Internal
 from src.public.schemas.image import ImageRead
 
 # Code
-class PropertyCreate(BaseModel):
+class Property(BaseModel):
     date: Type[datetime]
     title: Type[str]
     address: Type[str]
     price: Type[float]
     deposit: Type[float]
     description: Type[str]
-    status: Type[str]
+
+class PropertyCreate(Property):
     type_id: Type[int]
     city_id: Type[int]
     currency_id: Type[int]
-    user: Type[int]
+    user: Type[str]
     
-class PropertyRead(BaseModel):
+class PropertyRead(Property):
     id: Type[int]
-    date: Type[datetime]
-    title: Type[str]
-    address: Type[str]
-    price: Type[float]
-    deposit: Type[float]
-    description: Type[str]
     status: Type[str]
     longitude: Type[str]
     latitude: Type[str]        
