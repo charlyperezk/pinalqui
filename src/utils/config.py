@@ -11,7 +11,8 @@ class Config:
     
     default_value_declaration = {
             'properties': "PROPERTY_STATUS_ACTIVE",
-            'database_url': "DATABASE_URL"
+            'database_url': "DATABASE_URL",
+            'secret': "SECRET_KEY"
         }
 
     def __init__(self, check_start: bool=False):
@@ -39,7 +40,7 @@ class Config:
                 
                 
     @classmethod
-    def get_value_from_environment(cls, key):
+    def get_value_from_environment(cls, key: str):
         try:
             config = os.getenv(key)
         except KeyError:

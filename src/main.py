@@ -1,3 +1,6 @@
 # Internal
-from src.utils.config import Config
+from src.utils import config
 from src.db import db
+
+
+# db.create_portfolio_db_and_tables()
